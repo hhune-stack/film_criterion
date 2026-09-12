@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  /* Color */
+  --color-paper: #ffffff;
+  --color-ink: #171717;
+
+  /* Typography */
+  --font-size-body: 17px;
+  --line-height-body: 1.45;
+
+  /* Layout */
+  --container-reading: 720px;
+}
+
+@theme inline {
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-ink);
+  --font-sans: var(--font-serif);
+  --font-ui: var(--font-inter);
+}
+
+body {
+  background: #fcfaf5;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@keyframes introFade {
+  0% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
