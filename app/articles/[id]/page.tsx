@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import ArticleMeta from "@/components/ArticleMeta";
 import ArticleImage from "@/components/ArticleImage";
 import ArticleBody from "@/components/ArticleBody";
@@ -15,7 +16,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
   const { id } = await params;
   const article = getArticleById(id);
 
-  if (!article) return <p>記事が見つかりません。</p>;
+if (!article) notFound();
 
   const allArticles = getArticles();
   const relatedArticles = article.related
